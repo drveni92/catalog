@@ -1,1 +1,6 @@
-<p>list works!</p>
+<div *ngFor="let product of products" style="display: flex">
+  <div style="margin: 1rem; width: 150px!important; height: 150px!important;">
+    <app-product [product]="product">
+    </app-product>
+  </div>
+</div>
