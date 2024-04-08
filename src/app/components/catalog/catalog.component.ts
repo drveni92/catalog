@@ -1,7 +1,4 @@
-import {Component, OnInit} from '@angular/core';
-
-import {Product} from "../../models/product";
-import {DataService} from "../../services/data.service";
+import {Component} from '@angular/core';
 import {NgOptimizedImage} from "@angular/common";
 import {CategoryComponent} from "../category/category.component";
 import {RouterLink} from "@angular/router";
@@ -19,14 +16,6 @@ import {ListComponent} from "../list/list.component";
   templateUrl: './catalog.component.html',
   styleUrl: './catalog.component.css'
 })
-export class CatalogComponent implements OnInit {
+export class CatalogComponent {
 
-  products: Product[] = [];
-
-  constructor(private readonly dataService: DataService) {
-  }
-
-  ngOnInit() {
-    this.products = this.dataService.getProducts();
-  }
 }
